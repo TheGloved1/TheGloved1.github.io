@@ -14,6 +14,31 @@ section {
     min-height: 100vh;
 }
 
+button {
+    background-color: #6a6aff; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 8px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 24px; /* Rounded corners */
+}
+
+button:hover {
+    background-color: #4c4cff;
+}
+
+#next-section-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
 .hidden {
     opacity: 0;
     filter: blur(5px);
