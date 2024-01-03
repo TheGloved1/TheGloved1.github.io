@@ -100,9 +100,16 @@ button:hover {
 /* Image container */
 .image-container {
     position: relative;
-    width: 50vw; /* Adjust this value to suit your needs */
-    padding-bottom: 50vw; /* 16:9 Aspect Ratio (50% of width) */
-    margin: 0 auto; /* Center the container */
+    width: 50vw;
+    padding-bottom: 50vw;
+    margin: 0 auto;
+}
+
+.git-image-container {
+    position: relative;
+    width: 12vw;
+    padding-bottom: 12vw;
+    margin: auto;
 }
 
 .image-container img {
@@ -118,7 +125,7 @@ button:hover {
     width: 100%;
     height: auto;
     position: absolute;
-    object-fit: fill;
+    margin: auto;
 }
 
 /* nav */
