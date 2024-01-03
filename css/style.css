@@ -123,6 +123,20 @@ button:hover {
     object-fit: fill; /* This will make sure the image covers the entire container without distorting the aspect ratio */
 }
 
+.user-card {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0;
+    height: 32vw;
+    width: 18vw;
+    max-width: 18vw;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
 /* nav */
 nav {
     position: fixed;
