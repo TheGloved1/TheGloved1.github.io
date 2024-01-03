@@ -46,3 +46,11 @@ document.getElementById("next-section-button").addEventListener("click", functio
         nextSection.scrollIntoView({ behavior: "smooth" });
     }
 });
+
+document.getElementById("next-section-button-copy").addEventListener("click", function () {
+    var sections = Array.from(document.getElementsByTagName("section"));
+    var nextSection = sections[sections.indexOf(currentSection) + 1];
+    if (nextSection) {
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+});
