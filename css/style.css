@@ -16,7 +16,6 @@ section {
     padding: 0em;
     box-sizing: border-box;
     text-align: center;
-    grid-template-columns: repeat(auto-fill, minmax(25em, 1fr));
 }
 
 img {
@@ -59,12 +58,6 @@ button:hover {
     filter: blur(0.5em); /* Adjust as needed */
     transform: translateX(-10em); /* Adjust as needed */
     transition: all 1s;
-}
-
-@media (prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
 }
 
 .show {
