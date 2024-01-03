@@ -18,7 +18,7 @@ section {
     opacity: 0;
     filter: blur(5px);
     transform: translateX(-100px);
-    transition: all 1s;
+    transition: all 2s;
 }
 
 @media (prefers-reduced-motion) {
@@ -31,14 +31,4 @@ section {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
-}
-
-.memes:nth-child(2) {
-    transition-delay: 200ms;
-}
-.memes:nth-child(3) {
-    transition-delay: 400ms;
-}
-.memes:nth-child(4) {
-    transition-delay: 600ms;
 }
