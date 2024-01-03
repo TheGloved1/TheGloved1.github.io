@@ -79,3 +79,37 @@ button:hover {
         right: 10px;
     }
 }
+
+/* Video container */
+.video-container {
+    position: relative;
+    width: 50vw;
+    padding-bottom: 28.125vw; /* 16:9 Aspect Ratio (50% of width) */
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ffffff;
+}
+
+/* Image container */
+.image-container {
+    position: relative;
+    width: 50vw; /* Adjust this value to suit your needs */
+    padding-bottom: 50vw; /* 16:9 Aspect Ratio (50% of width) */
+    margin: 0 auto; /* Center the container */
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* This will make sure the image covers the entire container without distorting the aspect ratio */
+}
