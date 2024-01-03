@@ -15,12 +15,12 @@
 
 
 <body>
-	<section class="hidden">
+	<section class="hidden" id="welcome">
 		<h1>Welcome to my website!</h1>
 		<p>I'm Gloves</p>
 		<p>Scroll down or click<button id="next-section-button-copy">Next Section</button>for more info!</p>
 	</section>
-	<section class="hidden" id="about-me">
+	<section class="hidden" id="about">
 		<h2>About Me</h2>
 		<p>
 			I wear gloves all the time.
@@ -40,7 +40,7 @@
 		<h2>scroll down more</h2>
 	</section>
 	<section>
-		<h2 class="hidden">Here, Have some funnies</h2>
+		<h2 class="hidden" id="funnies">Here, Have some funnies</h2>
 		<section>
 			<div class="logo hidden image-container">
 				<img src="https://www.rd.com/wp-content/uploads/2023/04/Hilarious-Cat-Memes-2.jpg?fit=700,700">
@@ -53,7 +53,7 @@
 			</div>
 		</section>
 	</section>
-	<section class="hidden">
+	<section class="hidden" id="credits">
 		<h2>How I made this</h2>
 		<div class="video-container">
 			<iframe src="https://youtube.com/embed/T33NN_pPeNI/" title="YouTube video player" frameborder="0"
@@ -62,13 +62,14 @@
 			</iframe>
 		</div>
 	</section>
-	<section class="hidden">
+	<section class="hidden" id="github">
 		<h2>Here's my github</h2>
 		<div class="main container">
 			<div id="card" class="user-card">
 				<div class="image-container">
 					<a href="https://github.com/TheGloved1" target="_blank" rel="noopener">
-						<img src="https://avatars.githubusercontent.com/u/96776176?v=4" alt="User image">
+						<img id="git-user-img" src="https://avatars.githubusercontent.com/u/96776176?v=4"
+							alt="User image">
 					</a>
 				</div>
 
@@ -87,6 +88,17 @@
 		</div>
 	</section>
 </body>
+
 <button id="next-section-button">Next Section</button>
+
+<nav>
+	<ul>
+		<li><a href="#welcome">Welcome</a></li>
+		<li><a href="#about">About Me</a></li>
+		<li><a href="#funnies">Funnies</a></li>
+		<li><a href="#credits">How I Made This</a></li>
+		<li><a href="#github">My Github</a></li>
+	</ul>
+</nav>
 
 </html>
