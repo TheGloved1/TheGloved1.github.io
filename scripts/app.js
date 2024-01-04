@@ -14,7 +14,7 @@ const observer = new IntersectionObserver(
     {
         root: null,
         rootMargin: "0px",
-        threshold: 0.5,
+        threshold: 0.1,
     }
 );
 
@@ -32,7 +32,7 @@ let sectionObserver = new IntersectionObserver(
             }
         });
     },
-    { threshold: 0.5 }
+    { threshold: 0.7 }
 );
 
 document.querySelectorAll("section").forEach((section) => {

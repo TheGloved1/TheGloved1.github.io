@@ -19,6 +19,20 @@ section {
     text-align: center;
 }
 
+.hidden {
+    contain: content;
+    opacity: 0;
+    filter: blur(0.5em);
+    transform: translateX(-10em);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
 img {
     max-width: 100%;
     height: auto;
@@ -54,20 +68,6 @@ button:hover {
     right: 1.5em;
 }
 
-.hidden {
-    contain: paint;
-    opacity: 0;
-    filter: blur(0.5em);
-    transform: translateX(-10em);
-    transition: all 1s;
-}
-
-.show {
-    opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
-}
-
 @media screen and (max-width: 600px) {
     button {
         font-size: 14px;
@@ -78,6 +78,10 @@ button:hover {
     #next-section-button-copy {
         bottom: 10px;
         right: 10px;
+    }
+
+    nav ul li a {
+        font-size: 4vw; /* Adjust as needed */
     }
 }
 
@@ -129,7 +133,6 @@ button:hover {
     margin: 0 auto;
     padding: 2vw;
     height: auto;
-    max-width: 28vw;
     border: 0.2vw solid #fff; /* Adjust as needed */
     border-radius: 5px;
 }
@@ -148,7 +151,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 nav ul li {
@@ -156,6 +159,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-size: clamp(10px, 2vw, 20px);
     display: inline-block;
     padding: 1vw; /* Adjust as needed */
     color: #fff;
