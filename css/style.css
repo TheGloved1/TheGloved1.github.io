@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
 body {
     background-color: #121216;
     color: #ffffff;
@@ -12,7 +13,7 @@ section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 100vh;
+    min-height: 75vh;
     padding: 0em;
     box-sizing: border-box;
     text-align: center;
@@ -24,18 +25,18 @@ img {
 }
 
 button {
-    background-color: #6a6aff; /* Green */
+    background-color: #6a6aff;
     border: none;
     color: white;
-    padding: 1em 1.2em; /* Adjust as needed */
+    padding: 1em 1.2em;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1em; /* Adjust as needed */
-    margin: 0.2em 0.4em; /* Adjust as needed */
+    font-size: 1em;
+    margin: 0.2em 0.4em;
     cursor: pointer;
     transition-duration: 0.4s;
-    border-radius: 1.5em; /* Adjust as needed */
+    border-radius: 1.5em;
 }
 
 button:hover {
@@ -44,19 +45,19 @@ button:hover {
 
 #next-section-button {
     position: fixed;
-    bottom: 1.5em; /* Adjust as needed */
-    right: 1.5em; /* Adjust as needed */
+    bottom: 1.5em;
+    right: 1.5em;
 }
 
 #next-section-button-copy {
-    bottom: 1.5em; /* Adjust as needed */
-    right: 1.5em; /* Adjust as needed */
+    bottom: 1.5em;
+    right: 1.5em;
 }
 
 .hidden {
     opacity: 0;
-    filter: blur(0.5em); /* Adjust as needed */
-    transform: translateX(-10em); /* Adjust as needed */
+    filter: blur(0.5em);
+    transform: translateX(-10em);
     transition: all 1s;
 }
 
@@ -66,7 +67,6 @@ button:hover {
     transform: translateX(0);
 }
 
-/* Responsive styles */
 @media screen and (max-width: 600px) {
     button {
         font-size: 14px;
@@ -80,7 +80,6 @@ button:hover {
     }
 }
 
-/* Video container */
 .video-container {
     position: relative;
     width: 50vw;
@@ -97,7 +96,6 @@ button:hover {
     border: 2px solid #ffffff;
 }
 
-/* Image container */
 .image-container {
     position: relative;
     width: 50vw;
@@ -120,7 +118,7 @@ button:hover {
     left: 0;
     width: 100%;
     height: auto;
-    object-fit: fill; /* This will make sure the image covers the entire container without distorting the aspect ratio */
+    object-fit: fill;
 }
 
 .user-card {
@@ -137,7 +135,6 @@ button:hover {
     border-radius: 5px;
 }
 
-/* nav */
 nav {
     position: fixed;
     top: 0;
