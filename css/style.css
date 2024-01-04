@@ -118,6 +118,8 @@ button:hover {
 .image-container img {
     width: 95%;
     height: 95%;
+    padding: 0vw;
+    padding-top: 2vw;
 }
 
 .user-card {
