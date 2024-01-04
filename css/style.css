@@ -13,7 +13,7 @@ section {
     display: grid;
     place-items: center;
     align-content: center;
-    min-height: 75vh;
+    min-height: 100vh;
     padding: 0em;
     box-sizing: border-box;
     text-align: center;
@@ -55,6 +55,7 @@ button:hover {
 }
 
 .hidden {
+    contain: paint;
     opacity: 0;
     filter: blur(0.5em);
     transform: translateX(-10em);
@@ -98,9 +99,12 @@ button:hover {
 
 .image-container {
     position: relative;
-    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(100px, 100vw, 300px);
     height: auto;
-    padding-bottom: 50vw;
+    padding-bottom: 0vw;
     margin: 0 auto;
 }
 
@@ -108,30 +112,23 @@ button:hover {
     position: relative;
     width: 15vw;
     height: auto;
-    padding-bottom: 15vw;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    object-fit: fill;
+    width: 95%;
+    height: 95%;
 }
 
 .user-card {
     display: grid;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 0;
-    height: 32vw;
-    width: 18vw;
-    max-width: 18vw;
-    border: 1px solid #fff;
+    padding: 2vw;
+    height: auto;
+    max-width: 28vw;
+    border: 0.2vw solid #fff; /* Adjust as needed */
     border-radius: 5px;
 }
 
@@ -141,7 +138,7 @@ nav {
     width: 100%;
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 1vw; /* Adjust as needed */
 }
 
 nav ul {
@@ -158,12 +155,11 @@ nav ul li {
 
 nav ul li a {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 1vw; /* Adjust as needed */
     color: #fff;
     text-decoration: none;
     border: 1px solid #fff;
     border-radius: 5px;
-    font-size: 1.2em;
     transition: background-color 0.3s ease;
 }
 
