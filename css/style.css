@@ -51,10 +51,12 @@ button {
     cursor: pointer;
     transition-duration: 0.4s;
     border-radius: 1.5em;
+    transition: transform 0.3s ease;
 }
 
 button:hover {
     background-color: #4c4cff;
+    transform: scale(1.1);
 }
 
 #next-section-button {
@@ -68,6 +70,12 @@ button:hover {
     right: 1.5em;
 }
 
+#previous-section-button {
+    position: fixed;
+    bottom: 1.5em;
+    left: 1.5em;
+}
+
 @media screen and (max-width: 600px) {
     button {
         font-size: 14px;
@@ -79,9 +87,9 @@ button:hover {
         bottom: 10px;
         right: 10px;
     }
-
-    nav ul li a {
-        font-size: 4vw; /* Adjust as needed */
+    #previous-section-button {
+        bottom: 10px;
+        left: 10px;
     }
 }
 
@@ -159,17 +167,18 @@ nav ul li {
 }
 
 nav ul li a {
-    font-size: clamp(10px, 2vw, 20px);
     display: inline-block;
-    padding: 1vw; /* Adjust as needed */
+    padding: 1.5vh; /* Adjust as needed */
     color: #fff;
     text-decoration: none;
     border: 1px solid #fff;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    border-radius: 0.5vw;
+    font-size: 2.5vw;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 nav ul li a:hover {
     background-color: #555;
     color: #ddd;
+    transform: scale(1.1);
 }

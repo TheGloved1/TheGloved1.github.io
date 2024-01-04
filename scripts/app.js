@@ -54,3 +54,21 @@ document.getElementById("next-section-button-copy").addEventListener("click", fu
         nextSection.scrollIntoView({ behavior: "smooth" });
     }
 });
+
+document.getElementById("previous-section-button").addEventListener("click", function () {
+    var sections = Array.from(document.getElementsByTagName("section"));
+    var nextSection = sections[sections.indexOf(currentSection) - 1];
+    if (nextSection) {
+        nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+});
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+        });
+    });
+});
