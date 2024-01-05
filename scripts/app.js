@@ -93,7 +93,7 @@ document.getElementById("chatForm").addEventListener("submit", function (event) 
         updateChatHistory();
     }, 200);
 
-    fetch("https://glovedweb.ddns.net:3000/chat", {
+    fetch("https://glovedweb.ddns.net/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

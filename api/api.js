@@ -5,7 +5,7 @@ const https = require("https");
 const fs = require("fs");
 const OpenAI = require("openai");
 const app = express();
-const port = 3000;
+const port = 443;
 
 const openai = new OpenAI(process.env.OPENAI_API_KEY);
 
@@ -29,6 +29,7 @@ app.post("/chat", async (req, res) => {
         });
         console.log(response);
         res.json({ message: response.choices[0].message.content });
+        res.send("Response Sent!");
     } catch (error) {
         console.log(error);
         res.status(500).json({ error: error.toString() });
@@ -41,5 +42,5 @@ const httpsOptions = {
 };
 
 https.createServer(httpsOptions, app).listen(port, () => {
-    console.log(`Server running at https://207.199.235.110:${port}/`);
+    console.log(`Server running at https://glovedweb.ddns.net/`);
 });
