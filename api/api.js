@@ -1,6 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const https = require("https");
+const fs = require("fs");
 const OpenAI = require("openai");
 const app = express();
 const port = 3000;
@@ -10,7 +12,7 @@ const openai = new OpenAI(process.env.OPENAI_API_KEY);
 app.use(cors());
 app.use(express.json());
 
-app.post("/message", async (req, res) => {
+app.post("/chat", async (req, res) => {
     const chatHistory = req.body.prompt;
     const systemMessage = {
         role: "system",
@@ -32,6 +34,11 @@ app.post("/message", async (req, res) => {
     }
 });
 
-app.listen(port, () => {
-    console.log(`Server running at http://localhost:${port}/`);
+const httpsOptions = {
+    key: fs.readFileSync("key.pem"),
+    cert: fs.readFileSync("cert.pem"),
+};
+
+https.createServer(httpsOptions, app).listen(port, () => {
+    console.log(`Server running at https://207.199.235.110:${port}/`);
 });

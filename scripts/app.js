@@ -95,7 +95,7 @@ document.getElementById("chatForm").addEventListener("submit", function (event) 
         updateChatHistory();
     }, 500);
 
-    fetch("http://207.199.235.110:3000/message", {
+    fetch("http://207.199.235.110:3000/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
