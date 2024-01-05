@@ -82,20 +82,18 @@ document.getElementById("chatForm").addEventListener("submit", function (event) 
     updateChatHistory();
 
     // Add a temporary message to indicate that a response is being generated
-    var thinkingMessage = { role: "assistant", content: "." };
+    var dotCount = 0;
+    var thinkingMessage = { role: "assistant", content: `\`Thinking${".".repeat(dotCount)}\`` };
     chatHistory.push(thinkingMessage);
     updateChatHistory();
 
     var thinkingInterval = setInterval(function () {
-        if (thinkingMessage.content.length < 5) {
-            thinkingMessage.content += " .";
-        } else {
-            thinkingMessage.content = ".";
-        }
+        dotCount = (dotCount + 1) % 4; // Reset after 3 dots
+        thinkingMessage.content = "Thinking" + ".".repeat(dotCount);
         updateChatHistory();
-    }, 500);
+    }, 200);
 
-    fetch("http://207.199.235.110:3000/chat", {
+    fetch("https://glovedweb.ddns.net:3000/chat", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

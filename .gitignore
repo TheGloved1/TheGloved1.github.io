@@ -1,2 +1,5 @@
-/api
-/api/*
+.env
+
+api/api.js
+api/cert.pem
+api/key.pem
