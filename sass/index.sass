@@ -1,0 +1,284 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap")
+
+body
+  background-color: #121216
+  color: #ffffff
+  font-family: "Poppins", sans-serif
+  margin: auto
+  overflow-x: hidden
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  min-height: 100vh
+  align-content: center
+  flex-wrap: nowrap
+
+section
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  min-height: 100vh
+  box-sizing: border-box
+  text-align: center
+
+.hidden
+  contain: content
+  opacity: 0
+  filter: blur(0.5em)
+  transform: translateX(-10em)
+  transition: all 1s
+
+.show
+  opacity: 1
+  filter: blur(0)
+  transform: translateX(0)
+
+img
+  max-width: 100%
+  height: auto
+
+button
+  background-color: #6a6aff
+  border: none
+  color: white
+  padding: 1rem 1rem
+  text-align: center
+  text-decoration: none
+  display: inline-block
+  /* font-size: 1em; */
+  /* margin: 0.2rem 0.4rem; */
+  cursor: pointer
+  transition-duration: 0.4s
+  border-radius: 1.3rem
+  transition: transform 0.3s ease
+  &:hover
+    background-color: #4c4cff
+    transform: scale(1.1)
+  &:active
+    transform: scale(0.9)
+
+#next-section-button
+  position: fixed
+  bottom: 1rem
+  right: 1rem
+
+#next-section-button-copy
+  bottom: 1.5rem
+  right: 1.5rem
+
+#previous-section-button
+  position: fixed
+  bottom: 1rem
+  left: 1rem
+
+@media screen and (max-width: 600px)
+  button
+    padding: 1rem 1rem
+
+  #next-section-button,
+  #next-section-button-copy
+    bottom: 1em
+    right: 1em
+
+  #previous-section-button
+    bottom: 1em
+    left: 1em
+
+.video-container
+  position: relative
+  width: 50vw
+  padding-bottom: 28.125vw
+  margin: 0 auto
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    border: 2px solid #ffffff
+
+.image-container
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: center
+  width: clamp(100px, 100vw, 300px)
+  height: auto
+  padding-bottom: 0rem
+  margin: 0 auto
+  img
+    width: 95%
+    height: 95%
+    padding: 0vw
+    padding-top: 2rem
+
+.git-image-container
+  position: relative
+  width: 15vw
+  height: auto
+  margin: 0 auto
+
+.user-card
+  display: grid
+  justify-content: center
+  align-items: center
+  margin: 0 auto
+  padding: 2rem
+  height: auto
+  border: 0.2rem solid #fff
+  border-radius: 2rem
+
+nav
+  position: fixed
+  top: 0
+  left: 50%
+  transform: translateX(-50%)
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  background-color: #333
+  color: #fff
+  padding: 1rem
+  ul
+    list-style-type: none
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    li
+      flex: 1
+      display: flex
+      padding: 0
+      align-items: center
+      justify-content: center
+      a
+        display: inline-block
+        padding: 0.5rem
+        color: #fff
+        text-decoration: none
+        border: 1px solid #fff
+        border-radius: 0.6rem
+        font-size: 2vw
+        transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3)
+        background-color: #444
+        &:hover
+          background-color: #555
+          color: #ddd
+          transform: scale(1.1)
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7)
+        &:active
+          transform: scale(0.9)
+
+#chatbot
+  width: 65vw
+  height: 65vh
+  border: 0.3rem solid #6a6aff
+  padding: 1rem
+  margin: 0 auto
+  background-color: #121216
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.1)
+  display: flex
+  border-radius: 1vw
+  flex-direction: column
+  justify-content: center
+  font-family: "Poppins", sans-serif
+  color: #ffffff
+  align-items: stretch
+  font-size: 0.8rem
+
+#chatHistory
+  display: flex
+  flex-direction: column
+  padding: 0.5vw
+  overflow-y: auto
+  text-align: left
+  .message
+    max-width: 60%
+    margin-bottom: 1vw
+    padding: 1vw
+    border-radius: 1vw
+    color: #ffffff
+    .user
+      align-self: flex-start
+      background-color: #3b3b47
+    .bot
+      align-self: flex-end
+      background-color: #6a6aff
+  p
+    margin: 0.5vw 0
+    strong
+      color: #6a6aff
+
+.chat-container
+  border: 1px solid #ccc
+  height: 100%
+  overflow-y: scroll
+  padding: 8px
+  margin-bottom: 10px
+  border-radius: inherit
+
+#chatForm
+  display: flex
+  /* margin-top: 0vw; */
+  border-radius: inherit
+  input
+    flex-grow: 1
+    padding: 0.5vw
+    border: 4px solid #6a6aff
+    border-radius: inherit
+    background-color: #121216
+    color: #ffffff
+  button
+    margin-left: 1vw
+    margin-right: auto
+    padding: 1vw 3vw
+    border: none
+    background-color: #6a6aff
+    color: #ffffff
+    cursor: pointer
+    border-radius: inherit
+    transition-duration: 0.4s
+    &:hover
+      background-color: #4c4cff
+      transform: scale(1.1)
+
+::-webkit-scrollbar
+  width: 5px
+
+::-webkit-scrollbar-track
+  background: #f1f1f1
+
+::-webkit-scrollbar-thumb
+  background: #888
+  &:hover
+    background: #555
+
+.fancy-link
+  text-decoration: none
+  background-image: linear-gradient(90deg, red, blue)
+  background-size: 0% 3px
+  background-repeat: no-repeat
+  background-position: left 1.5rem
+  padding-block: 0.25rem
+  transition: color 500ms, background-size 500ms
+  &:hover,
+  &:focus
+    color: grey
+    background-size: 100% 3px
+
+#discord-widget
+  width: 50vh
+  height: 70vh
+  border: 2px solid #000
+  border-radius: 10px
+  overflow: hidden
+  position: relative
+
+/*# sourceMappingURL=style.css.map */

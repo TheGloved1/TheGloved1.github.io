@@ -1,106 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatiable" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>gloved.dev</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatiable" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>gloved.dev</title>
+		<link rel='stylesheet' href="css/index.css">
+		<script defer src="scripts/index.js"></script>
+		<link rel="icon" href="https://avatars.githubusercontent.com/u/96776176?v=4">
+	</head>
 
-	<link rel='stylesheet' href='css/style.css'>
-	<script defer src="scripts/app.js"></script>
-	<link rel="icon" href="https://avatars.githubusercontent.com/u/96776176?v=4">
-
-</head>
-
-<body>
-	<section class="hidden" id="welcome">
-		<h1>Welcome to my website!</h1>
-		<p>I'm Gloves</p>
-		<p>Scroll down or click<button id="next-section-button-copy">Next Section</button>for more info!</p>
-	</section>
-	<section class="hidden" id="about">
-		<h2>About Me</h2>
-		<p>
-			I wear gloves all the time.
-		</p>
-		<p>
-			I like to code.
-		</p>
-		<p>
-			I play video games.
-		</p>
-		<p>
-			Owner of the <a href="https://discord.gg/UuArMG6BtH" target="_blank" rel="noopener"
-				style="color: rgba(141, 139, 139, 0.541);">Gloved Cult</a>.
-		</p>
-	</section>
-	<section class="hidden">
-		<h2>scroll down more</h2>
-	</section>
-	<section id="funnies">
-		<h2 class="hidden">Here, Have some funnies</h2>
-		<div class="logo hidden image-container">
-			<img
-				src="https://www.boredpanda.com/blog/wp-content/uploads/2023/12/1-85-6579628158bf1__700.jpg?fit=700,700">
-		</div>
-		<div class="logo hidden image-container">
-			<img src="https://www.rd.com/wp-content/uploads/2023/04/Hilarious-Cat-Memes-2.jpg?fit=700,700">
-		</div>
-	</section>
-	<section class="hidden" id="credits">
-		<h2>How I made this</h2>
-		<div class="video-container">
-			<iframe src="https://youtube.com/embed/T33NN_pPeNI/" title="YouTube video player" frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen>
+	<body>
+		<section class="hidden" id="welcome">
+			<h1>Welcome to my website!</h1>
+			<p>I'm Gloves</p>
+			<p>Scroll down or click <button id="next-section-button-copy">Next Section</button> for more info!</p>
+		</section>
+		<section class="hidden" id="about">
+			<h2>About Me</h2>
+			<p>
+				I wear gloves all the time. (Don't Ask Why)
+			</p>
+			<p>
+				I like to code.
+			</p>
+			<p>
+				I play video games.
+			</p>
+			<p>
+				Owner of the <a class="fancy-link" href="#discord" target="_blank" rel="noopener"
+					style="color: rgba(141, 139, 139, 0.541);">Gloved Cult</a>.
+			</p>
+		</section>
+		<section id="discord" class="hidden">
+			<h2>The Cult</h2>
+			<a class="fancy-link" href="https://glovedweb.ddns.net/discord" target="_blank" rel="noopener"
+				style="color: rgba(141, 139, 139, 0.541);">https://glovedweb.ddns.net/discord
+			</a>
+			<iframe id="discord-widget" src="https://discord.com/widget?id=937806100546351174&theme=dark" width="350"
+				height="500" allowtransparency="true" frameborder="0"
+				sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
 			</iframe>
-		</div>
-	</section>
-	<section class="hidden" id="github">
-		<h2>Here's my github</h2>
-		<div class="main container">
-			<div id="card" class="user-card">
-				<div class="image-container git-image-container">
-					<a href="https://github.com/TheGloved1" target="_blank" rel="noopener">
-						<img id="git-user-img" src="https://avatars.githubusercontent.com/u/96776176?v=4"
-							alt="User image">
+		</section>
+		<section id="funnies">
+			<h2 class="hidden">Here, Have some funnies</h2>
+			<div class="logo hidden image-container">
+				<img
+					src="https://www.boredpanda.com/blog/wp-content/uploads/2023/12/1-85-6579628158bf1__700.jpg?fit=700,700">
+			</div>
+			<div class="logo hidden image-container">
+				<img src="https://www.rd.com/wp-content/uploads/2023/04/Hilarious-Cat-Memes-2.jpg?fit=700,700">
+			</div>
+		</section>
+		<section class="hidden" id="credits">
+			<h2>How I made this</h2>
+			<div class="video-container">
+				<iframe src="https://youtube.com/embed/T33NN_pPeNI/" title="YouTube video player" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+			</div>
+		</section>
+		<section class="hidden" id="github">
+			<h2>Here's my github</h2>
+			<div class="main container">
+				<div id="card" class="user-card">
+					<div class="image-container git-image-container">
+						<a href="https://github.com/TheGloved1" target="_blank" rel="noopener">
+							<img id="git-user-img" src="https://avatars.githubusercontent.com/u/96776176?v=4"
+								alt="User image">
+						</a>
+					</div>
+					<h2>Gloves</h2>
+					<span>TheGloved1</span>
+					<p>I wear gloves and write functional code.</p>
+					<a class="fancy-link" id="github-link" href="https://github.com/TheGloved1" target="_blank"
+						rel="noopener">https://github.com/TheGloved1
 					</a>
 				</div>
-				<h2>Gloves</h2>
-				<span>TheGloved1</span>
-				<p>I wear gloves and write functional code.</p>
-				<a id="github-link" href="https://github.com/TheGloved1" target="_blank"
-					rel="noopener">https://github.com/TheGloved1</a>
-
 			</div>
-		</div>
-	</section>
-	<section>
-		<h2 class="hidden">Just A Simple Little Chatbot</h2>
-		<div id="chatbot">
-			<h2>GlovedBot</h2>
-			<div id="chatHistory" class="chat-container"></div>
-			<form id="chatForm">
-				<input type="text" id="userMessage" placeholder="Type a message...">
-				<button type="submit">Send</button>
-			</form>
-		</div>
-	</section>
-</body>
+		</section>
+		<section>
+			<h2 class="hidden">Just A Simple Little Chatbot</h2>
+			<div id="chatbot">
+				<h2>GlovedBot</h2>
+				<div id="chatHistory" class="chat-container"></div>
+				<form id="chatForm">
+					<input type="text" id="userMessage" placeholder="Type a message...">
+					<button type="submit">Send</button>
+				</form>
+			</div>
+		</section>
+	</body>
 
-<button id="next-section-button">Next Section</button>
-<button id="previous-section-button">Previous Section</button>
+	<button id="next-section-button">Next Section</button>
+	<button id="previous-section-button">Previous Section</button>
 
-<nav>
-	<ul>
-		<li><a href="#welcome">Welcome</a></li>
-		<li><a href="#about">About</a></li>
-		<li><a href="#funnies">Memes</a></li>
-		<li><a href="#credits">Credits</a></li>
-		<li><a href="#github">Github</a></li>
-		<li><a href="#chatbot">Chatbot</a></li>
-	</ul>
-</nav>
+	<nav>
+		<ul>
+			<li><a href="#welcome">Welcome</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#discord">Discord</a></li>
+			<li><a href="#funnies">Memes</a></li>
+			<li><a href="#credits">Credits</a></li>
+			<li><a href="#github">Github</a></li>
+			<li><a href="#chatbot">Chatbot</a></li>
+		</ul>
+	</nav>
+	<div class="circle" style="
+		--circle-size: 40px;
+		position: fixed;
+		height: var(--circle-size);
+		width: var(--circle-size);
+		border: 1px solid white;
+		border-radius: 100%;
+		top: calc(var(--circle-size) / 2 * -1);
+		left: calc(var(--circle-size) / 2 * -1);
+		pointer-events: none;
+		">
+	</div>
 
 </html>
